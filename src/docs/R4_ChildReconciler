@@ -1,0 +1,42 @@
+# ChildReconciler
+
+协调算法：diff
+
+## Diff
+
+- deleteChild
+- deleteRemainingChildren
+- mapRemainingChildren
+- useFiber
+- placeChild
+- placeSingleChild
+- updateTextNode
+- updateElement
+- updatePortal
+- updateFragment
+- createChild
+- updateSlot
+- updateFromMap
+- warnOnInvalidKey
+- reconcileChildrenArray
+- reconcileChildrenIterator
+- reconcileSingleTextNode
+- reconcileSinglePortal
+- reconcileChildFibers
+<!-- - cloneChildFibers
+- resetChildFibers
+- requiredContext
+- getRootHostContainer
+- pushHostContainer
+- popHostContainer
+- getHostContext
+- pushHostContext
+- popHostContext
+- hasSuspenseContext
+- setDefaultShallowSuspenseContext
+- setShallowSuspenseContext
+- addSubtreeSuspenseContext
+- pushSuspenseContext
+- popSuspenseContext
+- shouldCaptureSuspense
+- findFirstSuspended -->
