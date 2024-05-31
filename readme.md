@@ -28,7 +28,7 @@
 - renderWithHooks
 
 ```jsx
-import ReactDOM from 'react-dom';
+import ReactDOM **from** 'react-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
