@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">Hello World</div>
+    <script>
+        const channel1 = new MessageChannel();
+        const channel2 = new MessageChannel();
+
+        const port1_2 = channel1.port2;
+        channel1.port1.onmessage = (msg) => {
+            console.log('channel port 1', msg);
+        };
+        const invoke1 = () => {
+            port1_2.postMessage('port 1 2');
+        };
+
+        channel2.port1.onmessage = (msg) => {
+            console.log('channel port 2', msg);
+        };
+        channel2.port2.postMessage('port 2 2');
+    </script>
+</body>
+
+</html>

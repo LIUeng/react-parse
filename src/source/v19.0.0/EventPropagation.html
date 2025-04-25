@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root">
+    <div id="container">
+      <h1 id="h1">1</h1>
+      <div id="button">2</div>
+    </div>
+  </div>
+
+  <script>
+    const root = document.getElementById('root');
+    const h1 = document.getElementById('h1');
+    const button = document.getElementById('button');
+    const container = document.getElementById('container');
+
+    function sayContainer() {
+      console.log('I am container');
+    }
+    function sayButton(e) {
+      // console.log(window.event)
+      // e = e || window.event;
+      // e.stopPropagation();
+      console.log('I am button');
+    }
+
+    root.addEventListener('click', (e) => {
+      console.log('root click')
+      let target = e.target;
+      if (target == button) {
+        e.stopPropagation();
+        sayButton();
+      } 
+    }, {
+      passive: true,
+      capture: false,
+    });
+  </script>
+</body>
+
+</html>
